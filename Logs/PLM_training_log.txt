@@ -1,0 +1,89 @@
+/content/drive/My Drive/HybridRE/Initial_Predictions/RE_improved_baseline/model.py:25: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast()
+config.json: 100% 481/481 [00:00<00:00, 3.27MB/s]
+tokenizer_config.json: 100% 25.0/25.0 [00:00<00:00, 196kB/s]
+vocab.json: 100% 899k/899k [00:00<00:00, 1.45MB/s]
+merges.txt: 100% 456k/456k [00:00<00:00, 1.09MB/s]
+tokenizer.json: 100% 1.36M/1.36M [00:00<00:00, 6.24MB/s]
+2025-12-15 13:39:33.983369: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-12-15 13:39:33.999221: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1765805974.017858   47219 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1765805974.023117   47219 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1765805974.039197   47219 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1765805974.039226   47219 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1765805974.039229   47219 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1765805974.039231   47219 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-12-15 13:39:34.044026: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+model.safetensors: 100% 499M/499M [00:01<00:00, 307MB/s]
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+DEBUG PATH: ./dataset/retacred/train.json
+DEBUG SIZE: 91613924
+100% 58465/58465 [01:26<00:00, 674.80it/s]
+100% 19584/19584 [00:27<00:00, 714.24it/s]
+100% 13418/13418 [00:18<00:00, 730.98it/s]
+/content/drive/My Drive/HybridRE/Initial_Predictions/RE_improved_baseline/train_retacred.py:42: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+Total steps: 9135
+Warmup steps: 913
+100% 1827/1827 [01:22<00:00, 22.16it/s]
+100% 612/612 [00:08<00:00, 70.18it/s]
+2025-12-15 13:43:28,034 - INFO - {'dev_precision': 76.94392082940622, 'dev_recall': 78.32813624370353, 'dev_f1': 77.62985855224058}
+100% 420/420 [00:05<00:00, 70.12it/s]
+2025-12-15 13:43:34,025 - INFO - {'test_precision': 75.8337609030272, 'test_recall': 78.5056657223796, 'test_f1': 77.14658547194433}
+Model checkpoint saved for the best epoch 1 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:21<00:00, 22.31it/s]
+100% 612/612 [00:08<00:00, 70.36it/s]
+2025-12-15 13:45:05,702 - INFO - {'dev_precision': 86.89092258224092, 'dev_recall': 84.26481170544496, 'dev_f1': 85.55772040915734}
+100% 420/420 [00:05<00:00, 71.23it/s]
+2025-12-15 13:45:11,601 - INFO - {'test_precision': 86.42485185850242, 'test_recall': 85.21600566572238, 'test_f1': 85.81617188196489}
+Model checkpoint saved for the best epoch 2 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:22<00:00, 22.26it/s]
+100% 612/612 [00:08<00:00, 71.56it/s]
+2025-12-15 13:46:43,284 - INFO - {'dev_precision': 87.65326140264835, 'dev_recall': 85.73998560805948, 'dev_f1': 86.68606766096762}
+100% 420/420 [00:05<00:00, 71.53it/s]
+2025-12-15 13:46:49,157 - INFO - {'test_precision': 87.88797716732073, 'test_recall': 87.23441926345609, 'test_f1': 87.55997867424915}
+Model checkpoint saved for the best epoch 3 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:22<00:00, 22.21it/s]
+100% 612/612 [00:08<00:00, 70.67it/s]
+2025-12-15 13:48:21,136 - INFO - {'dev_precision': 85.76570300708232, 'dev_recall': 88.59438714319981, 'dev_f1': 87.1570998761135}
+100% 420/420 [00:05<00:00, 70.28it/s]
+2025-12-15 13:48:27,115 - INFO - {'test_precision': 86.67471125667988, 'test_recall': 89.02266288951841, 'test_f1': 87.83299851515416}
+Model checkpoint saved for the best epoch 4 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:22<00:00, 22.27it/s]
+100% 612/612 [00:08<00:00, 71.37it/s]
+2025-12-15 13:49:58,762 - INFO - {'dev_precision': 89.56098777750063, 'dev_recall': 86.1237706884145, 'dev_f1': 87.80875519686965}
+100% 420/420 [00:05<00:00, 70.27it/s]
+2025-12-15 13:50:04,741 - INFO - {'test_precision': 89.8783185840708, 'test_recall': 86.31373937677054, 'test_f1': 88.0599710982659}
+Model checkpoint saved for the best epoch 5 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:22<00:00, 22.27it/s]
+100% 612/612 [00:08<00:00, 70.29it/s]
+2025-12-15 13:51:36,677 - INFO - {'dev_precision': 87.57102272727273, 'dev_recall': 88.72631326457184, 'dev_f1': 88.14488264029549}
+100% 420/420 [00:05<00:00, 70.02it/s]
+2025-12-15 13:51:42,676 - INFO - {'test_precision': 88.29002808988764, 'test_recall': 89.04036827195468, 'test_f1': 88.66361071932299}
+Model checkpoint saved for the best epoch 6 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:21<00:00, 22.32it/s]
+100% 612/612 [00:08<00:00, 71.80it/s]
+2025-12-15 13:53:14,167 - INFO - {'dev_precision': 84.95774647887325, 'dev_recall': 90.42935955864716, 'dev_f1': 87.60820310230639}
+100% 420/420 [00:06<00:00, 69.88it/s]
+2025-12-15 13:53:20,179 - INFO - {'test_precision': 85.27015793848712, 'test_recall': 90.81090651558074, 'test_f1': 87.95335676927036}
+100% 1827/1827 [01:21<00:00, 22.35it/s]
+100% 612/612 [00:08<00:00, 72.23it/s]
+2025-12-15 13:54:50,404 - INFO - {'dev_precision': 89.37469467513435, 'dev_recall': 87.76685056368434, 'dev_f1': 88.56347573520513}
+100% 420/420 [00:06<00:00, 69.63it/s]
+2025-12-15 13:54:56,438 - INFO - {'test_precision': 89.76207642393655, 'test_recall': 88.17280453257791, 'test_f1': 88.96034297963558}
+Model checkpoint saved for the best epoch 8 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:22<00:00, 22.24it/s]
+100% 612/612 [00:08<00:00, 71.86it/s]
+2025-12-15 13:56:28,109 - INFO - {'dev_precision': 89.20296008734684, 'dev_recall': 88.18661549532261, 'dev_f1': 88.69187624389362}
+100% 420/420 [00:05<00:00, 71.44it/s]
+2025-12-15 13:56:33,989 - INFO - {'test_precision': 89.45955619183965, 'test_recall': 88.50920679886686, 'test_f1': 88.9818440726237}
+Model checkpoint saved for the best epoch 9 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
+100% 1827/1827 [01:22<00:00, 22.20it/s]
+100% 612/612 [00:08<00:00, 71.03it/s]
+2025-12-15 13:58:06,011 - INFO - {'dev_precision': 88.72243528283796, 'dev_recall': 88.78627968337732, 'dev_f1': 88.75434600167846}
+100% 420/420 [00:05<00:00, 70.18it/s]
+2025-12-15 13:58:11,998 - INFO - {'test_precision': 88.94205209994684, 'test_recall': 88.86331444759207, 'test_f1': 88.90266584004961}
+Model checkpoint saved for the best epoch 10 at ./roberta-base/checkpoint_roberta-base_97/best_model.bin
