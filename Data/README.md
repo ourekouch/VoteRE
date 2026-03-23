@@ -4,13 +4,14 @@ This directory contains the full VoteRE data pipeline.
 
 ## Structure
 
+'''
 Data/
 ├── 0_raw/
 ├── 1_processed/
 ├── 2_prompts/
 ├── 3_Voters_Predictions/
 └── 4_VoteRE/
-
+'''
 ---
 
 ## Description
