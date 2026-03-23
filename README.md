@@ -102,20 +102,6 @@ python vote_re.py \
 
 ---
 
-## Voting Principle
-
-For each instance:
-- collect predictions from all voters,
-- count agreement,
-- select relation if ≥ k votes,
-- otherwise output `no_relation`.
-
-Trade-off:
-- low k → higher recall  
-- high k → higher precision  
-- moderate k → best balance  
-
----
 
 ## Output Format
 
@@ -128,30 +114,6 @@ CSV output includes:
 - predictions per voter
 - final voted relation
 
----
-
-## Use Cases
-
-VoteRE supports:
-- ensemble evaluation,
-- PLM vs LLM comparison,
-- robustness analysis,
-- diversity analysis,
-- threshold tuning.
-
----
-
-## Notes
-
-- Fully modular pipeline  
-- Reproducible experiments  
-- Notebook + script versions available  
-
----
-
-## Citation
-
-If you use VoteRE, please cite the corresponding paper.
 
 ---
 
